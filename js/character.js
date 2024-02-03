@@ -2,7 +2,9 @@
 const Id = new URLSearchParams(window.location.search).get("character");
 
 // Creating the Marvel API URL using the character ID
-const url = `http://gateway.marvel.com/v1/public/characters/${Id}?&ts=1&apikey=cdd335e9237921048323acfcd0d0ab9a&hash=e5f862bc2107b2fc554b35cd0935b887`;
+//const url = `http://gateway.marvel.com/v1/public/characters/${Id}?&ts=1&apikey=cdd335e9237921048323acfcd0d0ab9a&hash=e5f862bc2107b2fc554b35cd0935b887`;
+const url = `https://gateway.marvel.com/v1/public/characters/${Id}?&ts=1&apikey=cdd335e9237921048323acfcd0d0ab9a&hash=e5f862bc2107b2fc554b35cd0935b887`;
+
 
 // Calling the API through the URL
 async function char(url) {
