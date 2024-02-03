@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <title>SuperHero Hunter</title>
+
+    <!-- Adding icon to tab -->
+    <link rel="icon" type="image/x-icon" href="./assests/images/icon3.png" />
+
+    <!-- Inserting Font-Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Linking Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Inserting CSS file -->
+    <link rel="stylesheet" href="./css/favourite.css" />
+
+    <!-- Inserting JS file -->
+    <script defer src="./js/favourite.js"></script>
+  </head>
+  <body>
+    <!-- Background -->
+    <div class="backgroundimg">
+      <img src="./assests/images/image6.jpg" alt="" />
+    </div>
+    <!-- Home Page Link -->
+    <div class="favBtn"><a href="./index.html">Home</a></div>
+
+    <!--Character Container-->
+    <div class="charContainer">
+      <!-- <div class="favBtn"><a href='./index.html'>Home</a></div> -->
+      <ul class="charList" id="charList"></ul>
+    </div>
+
+    <!--when no Character is added to favourites-->
+    <div class="noChar" id="noChar">
+      <p class="desc">
+        Opps!! no Favourite characters to Display. Please go to Home search for
+        the Character and add.
+      </p>
+    </div>
+  </body>
+</html>

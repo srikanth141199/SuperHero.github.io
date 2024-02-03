@@ -1,0 +1,64 @@
+<!--https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <title>SuperHero Hunter</title>
+
+    <!-- Adding icon to tab -->
+    <link rel="icon" type="image/x-icon" href="./assests/images/icon3.png" />
+
+    <!-- Inserting Font-Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Linking Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Inserting CSS file -->
+    <link rel="stylesheet" href="./css/mainpage.css" />
+
+    <!-- Inserting Javascript file -->
+    <script defer src="./js/mainpage.js" type="module"></script>
+  </head>
+  <body>
+    <!--Background Image-->
+    <div class="backgroundimg">
+      <img src="./assests/images/image6.jpg" alt="" />
+    </div>
+
+    <div class="charList" id="charList">
+      <!--para to show no character found-->
+      <p class="charNotFound" id="charNotFound">No Characters Found</p>
+      <!--List to show the characters from the letters typed on search bar-->
+      <ul class="charListUl" id="charListUl"></ul>
+    </div>
+
+    <!--Search Bar starts-->
+    <div class="searchBar" id="search-bar">
+      <input
+        type="text"
+        name="search"
+        id="search"
+        placeholder="Type character"
+      />
+      <button class="searchButton">Search</button>
+    </div>
+
+    <div class="favBtn"><a href="./favourite.html">Favourite</a></div>
+  </body>
+</html>

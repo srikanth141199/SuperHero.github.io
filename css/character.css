@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "orbitron";
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.backgroundimg {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.backgroundimg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Utility Classes */
+.flex {
+  display: flex;
+}
+
+.f-c {
+  flex-direction: column;
+}
+
+.a-c {
+  align-items: center;
+}
+
+.a-s {
+  align-items: flex-start;
+}
+
+.j-s {
+  justify-content: flex-start;
+}
+
+.j-c {
+  justify-content: center;
+}
+
+.j-sb {
+  justify-content: space-between;
+}
+
+/* Defining variables for colors */
+:root {
+  --pure: #fff;
+  --dark: #000;
+  --list-background: rgba(255, 255, 255, 0.5);
+  --listHover: rgba(255, 255, 255, 0.7);
+  --theme: rgb(255, 0, 0);
+  --addBtn: rgb(73, 73, 73);
+  --addBtnHover: rgba(158, 158, 158, 0.7);
+}
+
+/*Fav button for Home Button*/
+
+h2,
+h4 {
+  color: var(--theme);
+}
+
+p {
+  color: var(--dark);
+}
+.favBtn {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.favBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.fav {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  overflow: hidden;
+}
+
+.fav a,
+.favBtn a {
+  text-decoration: none;
+  color: var(--pure);
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.fav a::before,
+.favBtn a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: var(--theme);
+  bottom: 0;
+  left: -100%;
+  z-index: 13;
+  transition: all 0.2s ease-in-out;
+}
+
+.fav a:hover::before,
+.favBtn a:hover::before {
+  left: 0;
+}
+
+.charContainer {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: rgb(255 255 255 / 74%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 75vh;
+  width: 50%;
+  border-radius: 12px;
+  overflow-y: auto;
+}
+
+/* Hide the default scrollbar */
+.charContainer::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+.charContainer::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+/* Handle */
+.charContainer::-webkit-scrollbar-thumb {
+  background: rgba(159, 157, 157, 0.905);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.charContainer::-webkit-scrollbar-thumb:hover {
+  background: rgba(247, 247, 247, 0.974);
+}

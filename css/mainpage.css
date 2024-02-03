@@ -1,0 +1,416 @@
+/* Reset default styles and set font-family */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "orbitron";
+}
+
+/* Body styling */
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Background image styling */
+.backgroundimg {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.backgroundimg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Styling for search bar and favorite button */
+.searchBar,
+.favBtn {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Search bar styling */
+.searchBar {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.searchBar input[type="text"] {
+  /* Styles for the search input */
+  width: 300px;
+  height: 30px;
+  background: transparent;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 2px solid var(--pure);
+  outline: none;
+  color: var(--pure);
+  font-size: 18px;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Placeholder styling for search input */
+.searchBar input[type="text"]::placeholder {
+  font-size: 20px;
+  color: var(--pure);
+  display: flex;
+  align-items: flex-end;
+  justify-content: right;
+}
+
+/* Search button styling */
+.searchBtn {
+  /* Common styles for the search button */
+  width: 6.5rem;
+  height: 30px;
+  background: var(--pure);
+  color: var(--dark);
+  font-size: 18px;
+  font-weight: 600;
+  border: 2px solid var(--pure);
+  padding: 0.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+}
+
+.searchBtn:hover {
+  /* Hover styles for the search button */
+  background: transparent;
+  color: var(--pure);
+}
+
+/* Favorite button styling */
+.favBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.favBtn a {
+  /* Styling for the favorite button link */
+  text-decoration: none;
+  color: var(--pure);
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.favBtn a::before {
+  /* Styling for the underline effect on hover */
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: var(--theme);
+  bottom: 0;
+  left: -100%;
+  z-index: 13;
+  transition: all 0.2s ease-in-out;
+}
+
+.favBtn a:hover::before {
+  /* Hover effect for the underline */
+  left: 0;
+}
+
+/* Utility Classes */
+.flex {
+  display: flex;
+}
+
+.f-c {
+  /* Flex direction column */
+  flex-direction: column;
+}
+
+.a-c {
+  /* Align items center */
+  align-items: center;
+}
+
+.a-s {
+  /* Align items flex-start */
+  align-items: flex-start;
+}
+
+.j-s {
+  /* Justify content flex-start */
+  justify-content: flex-start;
+}
+
+.j-c {
+  /* Justify content center */
+  justify-content: center;
+}
+
+.j-sb {
+  /* Justify content space-between */
+  justify-content: space-between;
+}
+
+/* Define color variables */
+:root {
+  --pure: #fff;
+  --dark: #000;
+  --list-background: rgba(255, 255, 255, 0.5);
+  --listHover: rgba(255, 255, 255, 0.7);
+  --theme: rgb(255, 0, 0);
+  --addBtn: rgb(73, 73, 73);
+  --addBtnHover: rgba(158, 158, 158, 0.7);
+}
+
+/* Styling for link */
+.link {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  z-index: 12;
+  overflow: hidden;
+}
+
+.link a {
+  /* Styling for link text */
+  text-decoration: none;
+  color: var(--pure);
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.link a::before {
+  /* Styling for the underline effect on hover */
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: var(--theme);
+  bottom: 0;
+  left: -100%;
+  z-index: 13;
+  transition: all 0.2s ease-in-out;
+}
+
+.link a:hover::before {
+  /* Hover effect for the underline */
+  left: 0;
+}
+
+/* Styling for script button */
+.script {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  color: var(--pure);
+  z-index: 14;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+.script:hover {
+  /* Hover effect for the script button */
+  border-right: 10px solid var(--theme);
+  padding-left: 0.7rem;
+}
+
+/* Styling for show/hide list button */
+.showHideList {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  color: var(--pure);
+  z-index: 14;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+.showHideList:hover {
+  /* Hover effect for the show/hide list button */
+  border-right: 10px solid var(--theme);
+  padding-left: 0.7rem;
+}
+
+/* Styling for character list */
+.charList {
+  position: absolute;
+  top: calc(15% + 20px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: 600px;
+  max-height: calc(100vh - 20% - 30px);
+  overflow: hidden;
+  overflow-y: auto;
+  background: var(--list-background);
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+}
+
+.charList ul {
+  /* Styling for character list ul */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.charList li {
+  /* Styling for character list li items */
+  height: 30px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: all 0.22s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.2rem 0;
+  padding: 0 1rem;
+}
+
+.charList li .charListContainer {
+  /* Styling for character list container */
+  display: flex;
+  align-items: center;
+}
+
+.charList li:hover {
+  /* Hover effect for character list items */
+  background: var(--listHover);
+  transform: scale(1.05);
+  height: 55px;
+}
+
+.charList li img {
+  /* Styling for character list item image */
+  width: 30px;
+  height: 30px;
+  border-radius: 0.2rem;
+  margin-right: 1rem;
+}
+
+.charList li .charName {
+  /* Styling for character list item name */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-left: 10px;
+}
+
+.charList li .addFav {
+  /* Styling for character list item add favorite button */
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 0.2rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.charList li .addFav .addFavi {
+  /* Styling for add favorite button icon */
+  font-size: 1.2rem;
+  color: var(--addBtn);
+}
+
+.charList li .addFav:hover {
+  /* Hover effect for add favorite button */
+  background: var(--addBtnHover);
+}
+
+.charList li .addFav:hover .addFavi {
+  /* Hover effect for add favorite button icon */
+  color: var(--dark);
+}
+
+/* Styling for search button */
+button.searchButton {
+  padding: 5px;
+  border: 2px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Media Query for width less than 710px */
+@media screen and (max-width: 710px) {
+  /* Responsive styles for width less than 710px */
+  .searchBar {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .searchBar input[type="text"] {
+    width: 230px;
+    color: var(--pure);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+
+  .searchBar input[type="text"]::placeholder {
+    font-size: 1rem;
+  }
+
+  .searchBtn {
+    width: 6rem;
+    font-size: 1rem;
+  }
+
+  .favBtn a {
+    font-size: 1.2rem;
+  }
+
+  .showHideList {
+    font-size: 1.2rem;
+  }
+}
+
+/* Media Query for width less than 510px */
+@media screen and (max-width: 510px) {
+  /* Responsive styles for width less than 510px */
+  .charList li {
+    font-size: 0.8rem;
+  }
+
+  .charList li:hover .charName {
+    font-size: 1rem;
+  }
+
+  .favBtn a {
+    font-size: 1rem;
+  }
+
+  .showHideList {
+    font-size: 1rem;
+  }
+}
